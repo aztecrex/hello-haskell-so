@@ -1,0 +1,62 @@
+-- This file has been generated from package.yaml by hpack version 0.20.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 72d498a819f742aabd50f099815af5a5d6287d6e6bcf6b8ed7f56e5abff95190
+
+name:           hello-haskell-so
+version:        0.1.0.0
+description:    Please see the README on Github at <https://github.com/githubuser/hello-haskell-so#readme>
+homepage:       https://github.com/githubuser/hello-haskell-so#readme
+bug-reports:    https://github.com/githubuser/hello-haskell-so/issues
+author:         Author name here
+maintainer:     example@example.com
+copyright:      2018 Author name here
+license:        BSD3
+license-file:   LICENSE
+build-type:     Simple
+cabal-version:  >= 1.10
+
+extra-source-files:
+    ChangeLog.md
+    README.md
+
+source-repository head
+  type: git
+  location: https://github.com/githubuser/hello-haskell-so
+
+library
+  hs-source-dirs:
+      src
+  build-depends:
+      base >=4.7 && <5
+  exposed-modules:
+      Lib
+  other-modules:
+      Paths_hello_haskell_so
+  default-language: Haskell2010
+
+executable hello-haskell-so-exe
+  main-is: Main.hs
+  hs-source-dirs:
+      app
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hello-haskell-so
+  other-modules:
+      Paths_hello_haskell_so
+  default-language: Haskell2010
+
+test-suite hello-haskell-so-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  hs-source-dirs:
+      test
+  ghc-options: -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.7 && <5
+    , hello-haskell-so
+  other-modules:
+      Paths_hello_haskell_so
+  default-language: Haskell2010
