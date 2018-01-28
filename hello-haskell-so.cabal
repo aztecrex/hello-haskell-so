@@ -29,7 +29,7 @@ library
       Paths_hello_haskell_so
   default-language: Haskell2010
 
-foreign-library myflib
+foreign-library helloFromHaskell
     type:               native-shared
     if os(windows)
       options: standalone
